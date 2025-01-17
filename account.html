@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - REDSTORE </title>
+    <link rel="stylesheet" href="style.css">
+   
+
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300;400;500;
+600;700&display=swap" 
+rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm
+/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+    
+   <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo1.png" width="175px">
+        </div>
+        <nav>
+           <ul id="MenuItems">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Account</a></li>
+            </ul>
+        </nav>
+        <img src="cart.png" width="30px" height="30px">
+        <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+</div>
+
+
+<!-------Acount-page-------------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="bodybuilding_PNG54.png" width="100%">
+            </div>
+            <div class="col-2">
+               <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login </span>
+                    <span onclick="register()">Register</span>
+                    <hr id="indicator">
+                </div>
+                <form id="loginform">
+                 <input type="text" placeholder="Username">
+                 <input type="password" placeholder="Password">
+                 <button type="submit" class="btn">Login</button>
+                 <a href="">Forgot Password</a>
+
+                </form>
+                <form id="regform">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+               </form>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--------footer-------->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios Mobile phone.</p>
+           
+               <div class="app-logo">
+                <img src="play-store.png">
+                <img src="app-store.png">
+               </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="logowhitw1.jpg">
+                <p>Our Purpose Is To Sustainable Make the Pleasure and 
+                    Benefits Of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>USefull Links</h3>
+              <ul>
+                <li>Coupons </li>
+                <li> Blog Post</li>
+                <li>Return Policy </li>
+                <li>Join Affiliate </li>
+             </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+              <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram </li>
+                <li>YouTube </li>
+                </ul>
+            </div>
+            </div>
+          <hr>
+        <p class="Copyright">Copyright 2024 - Pritam</p>
+    </div>
+</div>
+<!-------JS for toggle menu------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+     
+    MenuItems.style.maxHeight = "0px";
+
+ function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+   {
+     MenuItems.style.maxHeight = "200px";
+   }
+   else
+   {
+      MenuItems.style.maxHeight = "0px";
+   }
+
+ }
+
+</script>
+
+<!-------JS for toggle form------->
+<script>
+
+   var loginform = document.getElementById("loginform");
+   var regform = document.getElementById("regform");
+   var indicator = document.getElementById("indicator");
+
+   function register(){
+
+    regform.style.transform = "translateX(0px)";
+    loginform.style.transform = "translateX(0px)";
+    indicator.style.transform = "translateX(100px)";
+   
+   }
+   
+   function login(){
+
+regform.style.transform = "translateX(300px)";
+loginform.style.transform = "translateX(300px)";
+indicator.style.transform = "translateX(0px)";
+
+}
+   
+   
+</script>
+
+</body>
+</html>
